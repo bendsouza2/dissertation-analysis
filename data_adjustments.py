@@ -284,6 +284,23 @@ df.loc['flo_my_health', 'gender'] = 1
 df.loc['flo_my_health', 'weight'] = 1
 df.loc['flo_my_health', 'camera_roll'] = 1  # App store
 # Source https://flo.health/privacy-policy#1
-print(df.loc['flo_my_health'])
+df.loc['facebook', 'bank_account'] = 1
+df.loc['facebook', 'health_info'] = 1  # App store
+# Source https://en-gb.facebook.com/policy.php
+df.loc['instagram', 'religion'] = 1
+df.loc['instagram', 'race'] = 1
+df.loc['instagram', 'health_info'] = 1
+df.loc['instagram', 'bank_account'] = 1
+df.loc['instagram', 'gender'] = 1
+# Source https://help.instagram.com/519522125107875/?maybe_redirect_pol=0
 
-df.to_csv('binary_adjusted.csv')
+
+# Combining the hobbies/interests columns and mobile_number/home_number columns
+adjusted = df.drop('home_number', axis=1).copy()
+adjusted = adjusted.drop('hobbies', axis=1)
+adjusted.loc[df['home_number'] == 1, 'mobile_number'] = 1
+adjusted.loc[df['hobbies'] == 1, 'interests'] = 1
+adjusted.rename(columns={'mobile_number': 'phone_number'}, inplace=True)
+
+
+# adjusted.to_csv('binary_adjusted.csv')
