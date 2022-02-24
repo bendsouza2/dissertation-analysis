@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Reading the data
-df = pd.read_csv('binary_data.csv')
+df = pd.read_csv('binary_adjusted.csv')
 df = df.set_index('company')
 
 MAU_df = pd.read_csv('MAU.csv', header=None)
@@ -9,6 +9,12 @@ MAU_df.columns = ['company', 'MAU_millions', 'secondary_source']
 MAU_df = MAU_df.set_index('company')
 MAU_df['MAU_millions'] = MAU_df['MAU_millions'].astype(float)
 
+use = pd.read_csv('use_case.csv')
+use = use.set_index('company')
+use = use.drop(['source', 'source_2'], axis=1).copy()
+use = use.drop('user_response', axis=1).copy()
+use = use.drop('share_with_third_party', axis=1).copy()
+print(use)
 
 # Aggregating the data collected by big tech companies
 meta_agg = df.loc(axis=0)['facebook', 'instagram', 'whatsapp'].sum()
@@ -37,13 +43,10 @@ comb.dropna(axis=0, inplace=True)
 
 # Correlation between MAU and data collection
 monopoly_advantage = comb.corr()
-print(comb.dtypes)
-print(monopoly_advantage)
 
 
 # Summary statistics
 companies_collecting = df.sum(axis=0)
-print(companies_collecting)
 correlation = df.corr()
 
 

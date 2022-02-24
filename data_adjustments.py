@@ -302,5 +302,7 @@ adjusted.loc[df['home_number'] == 1, 'mobile_number'] = 1
 adjusted.loc[df['hobbies'] == 1, 'interests'] = 1
 adjusted.rename(columns={'mobile_number': 'phone_number'}, inplace=True)
 
+adjusted.rename(index={'mcdonalds_usa': 'mcdonalds', 'bet365_usa': 'bet365'}, inplace=True)
 
-# adjusted.to_csv('binary_adjusted.csv')
+# Writing the data to csv
+adjusted.to_csv('binary_adjusted.csv')
