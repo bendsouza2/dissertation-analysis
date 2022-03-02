@@ -1,1 +1,1 @@
-Storing all qunatitative analysis for my dissertation here
+Storing all quantitative analysis for my dissertation here
