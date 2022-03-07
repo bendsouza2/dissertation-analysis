@@ -58,3 +58,12 @@ prime,0,1,1,0,0,1,1,0,1,1,1,1,,https://www.amazon.co.uk/gp/help/customer/display
 twitch,0,1,1,0,0,1,1,0,1,1,1,1,,https://www.twitch.tv/p/en/legal/privacy-notice/#personal-information-twitch-collects-about-you,
 apple_ios,0,1,1,0,0,1,1,0,1,1,1,1,,https://www.apple.com/uk/legal/privacy/en-ww/,
 android,1,1,1,1,1,1,1,0,1,1,1,1,,https://policies.google.com/privacy?hl=en-US,
+bing,0,1,1,1,1,1,1,0,1,1,1,1,,https://privacy.microsoft.com/en-gb/privacystatement,
+yahoo,1,1,1,1,1,1,1,0,1,0,1,1,,https://legal.yahoo.com/us/en/yahoo/privacy/index.html,
+yandex,1,1,1,0,1,1,1,0,1,1,1,1,,https://yandex.com/legal/confidential/,
+duckduckgo,0,0,0,0,0,0,0,0,0,0,0,0,,https://duckduckgo.com/privacy#s4,
+ecosia,0,0,0,0,0,1,1,0,0,0,1,1,,https://info.ecosia.org/privacy,"""Google has lots of other services (Android, Chrome, Gmail, YouTube, Google Analytics being used on other websites etc.), which means they can combine data from a lot of sources and create a detailed profile of you"""
+safari,0,1,1,0,0,1,1,0,1,1,1,1,,https://www.apple.com/uk/legal/privacy/en-ww/,
+edge_ie,0,1,1,1,1,1,1,0,1,1,1,1,,https://privacy.microsoft.com/en-gb/privacystatement,
+firefox,0,0,0,0,0,1,0,0,0,0,1,1,,https://www.mozilla.org/en-US/privacy/firefox/,
+opera,0,1,0,0,0,1,1,0,1,0,1,1,,https://www.opera.com/privacy,
